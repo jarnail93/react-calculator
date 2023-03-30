@@ -1,0 +1,20 @@
+.pad-grid {
+    grid-gap: 5px;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+.pad-grid button.equal {
+    grid-row-end: span 2;
+}
+.pad-grid button {
+    font-size: x-large;
+    height: 100%;
+}
+
+.display-area {
+    font-size: xx-large;
+}
+.display-area.dark {
+    color: #141619;
+    background-color: #d3d3d4;
+}
