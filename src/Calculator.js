@@ -34,15 +34,15 @@ function Calculator(prop) {
       exp = exp.slice(5);
     }
 
-    if ('b' == btn) {
+    if ('b' === btn) {
       if (ansPresence) exp = "";
       else exp = exp.slice(0, -1);
     }
-    else if ('AC' == btn) {
+    else if ('AC' === btn) {
       exp = "";
       setHistory(historyInitialValue);
     }
-    else if ('=' == btn) {
+    else if ('=' === btn) {
       try {
         let ans = evaluate(exp);
         addHistory({ exp, ans: ans + '' });
@@ -52,7 +52,7 @@ function Calculator(prop) {
         exp = 'Malformed exoression';
       }
     }
-    else if ('Sqrt' == btn) {
+    else if ('Sqrt' === btn) {
       try {
         exp = `sqrt(${exp})`;
         let ans = evaluate(exp);

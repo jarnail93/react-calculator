@@ -57,8 +57,7 @@ export default function ButtonGrid(prop) {
             variant={element.variant}
             className={element.className}
             onClick={(e) => prop.buttonPressed(e.target.value)}
-            value={element.value}
-            datav={element.value}>
+            value={element.value}>
             {element.text}
           </Button>
         )
