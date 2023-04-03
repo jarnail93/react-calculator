@@ -20,7 +20,7 @@ export default function History(prop) {
       {
         <ListGroup as="ol" numbered>
           {
-            dataList.map(item =>
+            [...dataList].reverse().map(item =>
               <ListGroup.Item as="li" key={item.id} variant={prop.theme}>
                 <Button
                   value={item.exp}

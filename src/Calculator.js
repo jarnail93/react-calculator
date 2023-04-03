@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Card } from "react-bootstrap";
 import { Container, Row, Col } from "react-bootstrap";
 import { evaluate } from "mathjs";
@@ -16,12 +16,14 @@ function Calculator(prop) {
   const [history, setHistory] = useState(historyInitialValue);
   const [display, setDisplay] = useState("");
 
+  const ButtonGridMemo = memo(ButtonGrid);
+
   // if theme is dark, borders will be light
   let inverseTheme = prop.darkTheme ? "light" : "dark";
   let sameTheme = prop.darkTheme ? "dark" : "light";
 
   function addHistory(newEntry) {
-    let existingHistory = [newEntry, ...history];
+    let existingHistory = [...history, newEntry];
     setHistory(existingHistory);
   }
 
@@ -102,7 +104,7 @@ function Calculator(prop) {
           {/* Button Grid here */}
           <Row>
             <Col>
-              <ButtonGrid buttonPressed={buttonPressed} theme={sameTheme} />
+              <ButtonGridMemo buttonPressed={buttonPressed} theme={sameTheme} />
             </Col>
           </Row>
 
