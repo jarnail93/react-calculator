@@ -5,7 +5,6 @@ import 'react-bootstrap/dist/react-bootstrap.min.js';
 // we don't ship with any included CSS. However, some stylesheet is required to 
 // use these components.
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 import { useState } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
